@@ -146,11 +146,11 @@ with mlflow.start_run(run_name="RF Model") as run:
 import mlflow.keras
 
 with mlflow.start_run(run_name="NN Model") as run:
-  mlflow.keras.log_model(nn, "model")
-  mlflow.log_metric("mse", nn_mse)
+    mlflow.keras.log_model(nn, "model")
+    mlflow.log_metric("mse", nn_mse)
 
-  kerasRunID = run.info.run_uuid
-  kerasURI = run.info.artifact_uri
+    kerasRunID = run.info.run_uuid
+    kerasURI = run.info.artifact_uri
 
 # COMMAND ----------
 
